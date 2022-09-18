@@ -3,7 +3,7 @@ import React from 'react';
 
 export interface ToggleSwitchProps {
   enabled: boolean;
-  onChange: (value: Boolean) => void;
+  onChange: (value: boolean) => void;
 }
 
 export const ToggleSwitch = ({ enabled, onChange }: ToggleSwitchProps) => (
