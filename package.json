@@ -53,6 +53,7 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.19.1",
+    "@semantic-release/npm": "^9.0.1",
     "@size-limit/preset-small-lib": "^8.1.0",
     "@storybook/addon-essentials": "^6.5.12",
     "@storybook/addon-info": "^5.3.21",
@@ -71,12 +72,12 @@
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
     "rollup-plugin-postcss": "^4.0.2",
+    "semantic-release": "^19.0.5",
     "size-limit": "^8.1.0",
     "tailwindcss": "^3.1.8",
     "tsdx": "^0.14.1",
     "tslib": "^2.4.0",
-    "typescript": "^4.8.3",
-    "semantic-release": "^19.0.5"
+    "typescript": "^4.8.3"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.2",
