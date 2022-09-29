@@ -16,4 +16,16 @@ module.exports = {
   typescript: {
     check: true, // type-check stories during Storybook build
   },
+  webpackFinal: async (config, { configType }) => {
+    // Resolve error when webpack-ing storybook:
+    // Can't import the named export 'Children' from non EcmaScript module (only
+    // default export is available)
+    config.module.rules.push({
+      test: /\.mjs$/,
+      include: /node_modules/,
+      type: 'javascript/auto',
+    });
+
+    return config;
+  },
 };
