@@ -30,13 +30,13 @@ export const Switch = ({
       className={classNames(
         `group relative inline-flex border-2 border-transparent rounded-full 
        cursor-pointer transition-colors ease-in-out duration-400
-       focus:ring-2 focus:ring-offset-2 focus:ring-pink-400 
+       focus:ring-2 focus:ring-offset-2 focus:ring-primary-400 
        focus:outline-none`,
         {
           'h-4 w-8': size === 'small',
           'h-5 w-10': size === 'default',
           'h-6 w-11': size === 'large',
-          'bg-pink-400': checked,
+          'bg-primary-400': checked,
           'bg-gray-300': !checked,
           'opacity-70 cursor-not-allowed': disabled,
         }
