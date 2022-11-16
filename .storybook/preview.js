@@ -1,7 +1,17 @@
 import '../tailwind.css';
 
-// https://storybook.js.org/docs/react/writing-stories/parameters#global-parameters
-export const parameters = {
-  // https://storybook.js.org/docs/react/essentials/actions#automatically-matching-args
-  actions: { argTypesRegex: '^on.*' },
-};
+import React from 'react';
+import { GlobalStyles, theme } from 'twin.macro';
+import { CacheProvider } from '@emotion/react';
+import createCache from '@emotion/cache';
+
+const cache = createCache({ prepend: true, key: 'twin' });
+
+export const decorators = [
+  (Story) => (
+    <CacheProvider value={cache}>
+      <GlobalStyles />
+      <Story />
+    </CacheProvider>
+  ),
+];
