@@ -33,8 +33,8 @@ const fruitOptions: Fruit[] = [
 
 export function Default() {
   const [selectedFruit, setSelectedFruit] = useState<Fruit>({
-    id: 'apple',
-    name: 'Apple',
+    id: 'banana',
+    name: 'Banana',
   });
 
   return (
