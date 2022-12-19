@@ -92,6 +92,7 @@
     "@headlessui/react": "^1.7.2",
     "classnames": "^2.3.2",
     "framer-motion": "^7.5.0",
+    "react-icons": "^4.7.1",
     "twin.macro": "^3.0.0"
   },
   "babelMacros": {

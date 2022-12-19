@@ -1,6 +1,6 @@
 import { ComponentMeta } from '@storybook/react';
 import React from 'react';
-import { LinkButton } from '../src/Button';
+import { GhostButton, LinkButton } from '../src/Button';
 
 export default {
   title: 'Input/Button',
@@ -9,4 +9,8 @@ export default {
 
 export function Link() {
   return <LinkButton>Hello!</LinkButton>;
+}
+
+export function Ghost() {
+  return <GhostButton>Ghost Button</GhostButton>;
 }
