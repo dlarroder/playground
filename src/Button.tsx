@@ -19,3 +19,17 @@ export const LinkButton = styled.a(
   dark:from-primary-500 
   dark:to-primary-500`
 );
+
+export interface ButtonProps {
+  active?: boolean;
+}
+
+export const GhostButton = styled.button(({ active }: ButtonProps) => [
+  tw`
+  transition flex space-x-1 items-center px-1.5 py-0.5 rounded 
+  focus:ring-primary-400 focus:outline-none active:ring-0`,
+  active
+    ? tw`bg-primary-400 text-white border border-transparent`
+    : tw`bg-white text-primary-500 active:bg-primary-500 
+         active:text-white border border-primary-500`,
+]);
