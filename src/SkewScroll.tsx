@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import React, { ReactNode, useEffect, useRef } from 'react';
+import React, { ReactNode, useEffect, useMemo, useRef } from 'react';
 import tw from 'twin.macro';
 import useWindowSize from './hooks/useWindowSize';
 
@@ -20,12 +20,15 @@ export function SkewScroll({ children, sensitivity = 7.5 }: SkewScrollProps) {
   const scrollContainer = useRef<HTMLDivElement>(null);
 
   // Configs
-  const data = {
-    ease: 0.1,
-    current: 0,
-    previous: 0,
-    rounded: 0,
-  };
+  const data = useMemo(
+    () => ({
+      ease: 0.1,
+      current: 0,
+      previous: 0,
+      rounded: 0,
+    }),
+    []
+  );
 
   //set the height of the body.
   useEffect(() => {
@@ -66,7 +69,6 @@ export function SkewScroll({ children, sensitivity = 7.5 }: SkewScrollProps) {
         scrollContainer.current.style.transform = `translate3d(0, -${data.rounded}px, 0) skewY(${skew}deg)`;
       }
 
-      //loop vai raf
       requestAnimationFrame(() => skewScrolling());
     };
 
