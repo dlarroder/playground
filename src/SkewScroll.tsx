@@ -1,5 +1,11 @@
+import styled from '@emotion/styled';
 import React, { ReactNode, useEffect, useRef } from 'react';
+import tw from 'twin.macro';
 import useWindowSize from './hooks/useWindowSize';
+
+const SkewWrapper = styled.div(
+  tw`fixed top-0 left-0 h-full w-full overflow-hidden`
+);
 
 interface SkewScrollProps {
   children: ReactNode;
@@ -68,8 +74,8 @@ export function SkewScroll({ children, sensitivity = 7.5 }: SkewScrollProps) {
   }, [data, size.width, sensitivity]);
 
   return (
-    <div className="fixed top-0 left-0 h-full w-full overflow-hidden">
+    <SkewWrapper>
       <div ref={scrollContainer}>{children}</div>
-    </div>
+    </SkewWrapper>
   );
 }
