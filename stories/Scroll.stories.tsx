@@ -1,5 +1,6 @@
 import { ComponentMeta } from '@storybook/react';
 import React from 'react';
+import { HoverableText } from '../src/HoverableText';
 import { SkewScroll } from '../src/SkewScroll';
 
 export default {
@@ -9,18 +10,18 @@ export default {
 
 export function SkewSmoothScroll() {
   return (
-    <SkewScroll sensitivity={12}>
-      <div className="w-full h-screen bg-primary-200 text-4xl text-center">
-        hi!
+    <SkewScroll sensitivity={15}>
+      <div className="w-full h-screen bg-primary-200 flex justify-center items-center">
+        <HoverableText text="Skew" />
       </div>
-      <div className="w-full h-screen bg-primary-400 text-4xl text-center">
-        hello!
+      <div className="w-full h-screen bg-primary-400 flex justify-center items-center">
+        <HoverableText text="Scroll" />
       </div>
-      <div className="w-full h-screen bg-primary-600 text-4xl text-center">
-        hola!
+      <div className="w-full h-screen bg-primary-600 flex justify-center items-center">
+        <HoverableText text="Skew" />
       </div>
-      <div className="w-full h-screen bg-primary-800 text-4xl text-center">
-        hey!
+      <div className="w-full h-screen bg-primary-800 flex justify-center items-center">
+        <HoverableText text="Scroll" />
       </div>
     </SkewScroll>
   );
