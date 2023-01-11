@@ -1,6 +1,7 @@
 import { ComponentMeta } from '@storybook/react';
 import React from 'react';
-import { GhostButton, LinkButton } from '../src/Button';
+import { BsArrowDownShort } from 'react-icons/bs';
+import { ButtonSkeleton, GhostButton, LinkButton } from '../src/Button/Button';
 
 export default {
   title: 'Input/Button',
@@ -12,5 +13,47 @@ export function Link() {
 }
 
 export function Ghost() {
-  return <GhostButton>Ghost Button</GhostButton>;
+  return (
+    <div className="flex flex-col space-y-3">
+      <GhostButton size="sm">Button</GhostButton>
+      <GhostButton size="md">Button</GhostButton>
+      <GhostButton size="lg">Button</GhostButton>
+
+      <GhostButton size="sm" icon={<BsArrowDownShort className="text-lg" />}>
+        Upload
+      </GhostButton>
+      <GhostButton size="md" icon={<BsArrowDownShort className="text-lg" />}>
+        Upload
+      </GhostButton>
+      <GhostButton size="lg" icon={<BsArrowDownShort className="text-lg" />}>
+        Upload
+      </GhostButton>
+      <GhostButton
+        size="sm"
+        width="full"
+        icon={<BsArrowDownShort className="text-lg" />}
+        iconPosition="left"
+      >
+        Upload
+      </GhostButton>
+      <GhostButton
+        size="sm"
+        width="full"
+        icon={<BsArrowDownShort className="text-lg" />}
+        iconPosition="right"
+      >
+        Upload
+      </GhostButton>
+    </div>
+  );
+}
+
+export function Skeleton() {
+  return (
+    <div className="flex flex-col space-y-3">
+      <ButtonSkeleton size="sm">Skeleton</ButtonSkeleton>
+      <ButtonSkeleton size="md">Skeleton</ButtonSkeleton>
+      <ButtonSkeleton size="lg">Skeleton</ButtonSkeleton>
+    </div>
+  );
 }
