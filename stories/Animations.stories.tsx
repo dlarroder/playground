@@ -1,6 +1,7 @@
 import { useState } from '@storybook/addons';
 import React from 'react';
 import { AnimatedBars } from '../src/AnimatedBars';
+import { DrawingCanvas } from '../src/DrawingCanvas';
 import { HoverableText } from '../src/HoverableText';
 import { StrikeThrough } from '../src/StrikeThrough';
 
@@ -45,3 +46,9 @@ export function StrikeThroughExample() {
 }
 
 StrikeThroughExample.storyName = 'Strike Through';
+
+export function DrawingCanvasExample() {
+  return <DrawingCanvas />;
+}
+
+DrawingCanvasExample.storyName = 'Drawing Canvas';
