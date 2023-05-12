@@ -22,7 +22,7 @@
     "prepare": "yarn build",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "storybook": "NODE_OPTIONS=\"--openssl-legacy-provider\" start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build-tailwind": "npx tailwindcss -o ./dist/styles.css --minify",
     "semantic-release": "semantic-release --branches master"
